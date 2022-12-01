@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Tags</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Heading -->
+    <h1>Heading level 1</h1>
+    <h2>Heading level 2</h2>
+    <h3>Heading level 3</h3>
+    <h4>Heading level 4</h4>
+    <h5>Heading level 5</h5>
+    <h6>Heading level 6</h6>
+
+    <!-- Paragraph -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nostrum?
+      Perspiciatis tempora vitae blanditiis minima laboriosam a repellendus
+      necessitatibus itaque?
+    </p>
+
+    <!-- Break Row -->
+    <br /><br /><br /><br /><br /><br />
+
+    <!-- Horizontal Line -->
+    <hr />
+
+    <!-- Image 
+    the image tag allows to add images into the html page
+    when width/height is set height/width will change in ratio. if both are set it will be as set. if none is set will keep the origianl size
+
+    Attributes: 
+        * alt - alternate text. do not use words like image, picture etc.
+        * src - the url to the actual image. or (not recommanded) data:image/...
+        width 
+        height
+    -->
+    <img
+      src="https://cdn.pixabay.com/photo/2022/10/07/12/02/sunset-7504891_960_720.jpg"
+      alt="orange skies"
+      height="200"
+    />
+
+    <!-- Hyperlink 
+    Hyperlink to another web page (internal or external)
+
+    Attributes:
+        * href - the url of the page for the user to be reffered to
+        trarget - if set to _blank will be opened in a new tab
+    -->
+    <a href="https://www.w3schools.com/tags/default.asp" target="_blank">
+      W3SCHOOLS Tag Reference
+    </a>
+
+    <br />
+    <a href="https://google.com">
+      <img
+        width="200"
+        src="https://www.google.com/logos/doodles/2015/googles-new-logo-5078286822539264.3-hp2x.gif"
+        alt="google says hi"
+      />
+
+      <p>hello</p>
+    </a>
+
+    <!-- Video -->
+    <video
+      controls
+      autoplay
+      muted
+      loop
+      width="200"
+      src="https://media.istockphoto.com/id/613196860/video/ship-passing-by-floating-on-sea-at-sunset.mp4?s=mp4-640x640-is&k=20&c=8PBPRFRLm77-iqdaJq8jMUCE1fu-nkQfj9KCv9AysHo="
+    ></video>
+
+    <!-- ul/ol
+    under ol/ul only li (list item)  tags should appear
+    -->
+
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>
+        <ol>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ol>
+      </li>
+      <li>item 5</li>
+      <li>
+        <ul>
+          <li>item 1</li>
+          <li>
+            <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ul>
+          </li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </li>
+      <li>item 6</li>
+    </ul>
+
+    <ol>
+      <li>item 1</li>
+      <li>
+        <a href="https://google.com">GOOGLE</a>
+      </li>
+      <li>
+        <ol>
+          <li>item 1</li>
+          <li>item 2</li>
+        </ol>
+      </li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+    </ol>
+
+    <!-- 
+      Table must have the following tags sequence
+
+      table
+          thead -> tr * 1+
+          tbody -> tr * 1+
+          tfoot -> tr * 1+
+
+      inside tr only td or th as cells
+      td - data cell
+      th - header cell
+
+     -->
+
+    <table>
+      <thead>
+        <tr>
+          <td>row 1 cell 1</td>
+          <th>row 1 cell 2</th>
+          <th>row 1 cell 3</th>
+          <th>row 1 cell 4</th>
+          <th>row 1 cell 5</th>
+        </tr>
+        <tr>
+          <th>row 2 cell 1</th>
+          <th>row 2 cell 2</th>
+          <th>row 2 cell 3</th>
+          <th colspan="2">row 2 cell 4</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>tbody row 1 col 1</td>
+          <td>tbody row 1 col 2</td>
+          <td>tbody row 1 col 3</td>
+          <td>tbody row 1 col 4</td>
+          <td>tbody row 1 col 5</td>
+        </tr>
+        <tr>
+          <td>tbody row 2 col 1</td>
+          <td>tbody row 2 col 2</td>
+          <td>tbody row 2 col 3</td>
+          <td>tbody row 2 col 4</td>
+          <td>tbody row 2 col 5</td>
+        </tr>
+        <tr>
+          <td>tbody row 3 col 1</td>
+          <td>tbody row 3 col 2</td>
+          <td>tbody row 3 col 3</td>
+          <td>tbody row 3 col 4</td>
+          <td>tbody row 3 col 5</td>
+        </tr>
+        <tr>
+          <td colspan="5">merged cells</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Summary:</th>
+          <td>23</td>
+          <td>453</td>
+          <td>44</td>
+          <td>55</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
