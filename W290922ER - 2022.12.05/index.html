@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Tags</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Heading -->
+    <h1>Heading level 1</h1>
+    <h2>Heading level 2</h2>
+    <h3>Heading level 3</h3>
+    <h4>Heading level 4</h4>
+    <h5>Heading level 5</h5>
+    <h6>Heading level 6</h6>
+
+    <!-- Paragraph -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, nostrum?
+      Perspiciatis tempora vitae blanditiis minima laboriosam a repellendus
+      necessitatibus itaque?
+    </p>
+
+    <!-- Break Row -->
+    <br /><br /><br /><br /><br /><br />
+
+    <!-- Horizontal Line -->
+    <hr />
+
+    <!-- Image 
+    the image tag allows to add images into the html page
+    when width/height is set height/width will change in ratio. if both are set it will be as set. if none is set will keep the origianl size
+
+    Attributes: 
+        * alt - alternate text. do not use words like image, picture etc.
+        * src - the url to the actual image. or (not recommanded) data:image/...
+        width 
+        height
+    -->
+    <img
+      src="https://cdn.pixabay.com/photo/2022/10/07/12/02/sunset-7504891_960_720.jpg"
+      alt="orange skies"
+      height="200"
+    />
+
+    <!-- Hyperlink 
+    Hyperlink to another web page (internal or external)
+
+    Attributes:
+        * href - the url of the page for the user to be reffered to
+        trarget - if set to _blank will be opened in a new tab
+    -->
+    <a href="https://www.w3schools.com/tags/default.asp" target="_blank">
+      W3SCHOOLS Tag Reference
+    </a>
+
+    <br />
+    <a href="https://google.com">
+      <img
+        width="200"
+        src="https://www.google.com/logos/doodles/2015/googles-new-logo-5078286822539264.3-hp2x.gif"
+        alt="google says hi"
+      />
+
+      <p>hello</p>
+    </a>
+
+    <!-- Video -->
+    <video
+      controls
+      autoplay
+      muted
+      loop
+      width="200"
+      src="https://media.istockphoto.com/id/613196860/video/ship-passing-by-floating-on-sea-at-sunset.mp4?s=mp4-640x640-is&k=20&c=8PBPRFRLm77-iqdaJq8jMUCE1fu-nkQfj9KCv9AysHo="
+    ></video>
+
+    <!-- ul/ol
+    under ol/ul only li (list item)  tags should appear
+    -->
+
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>
+        <ol>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ol>
+      </li>
+      <li>item 5</li>
+      <li>
+        <ul>
+          <li>item 1</li>
+          <li>
+            <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+            </ul>
+          </li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </li>
+      <li>item 6</li>
+    </ul>
+
+    <ol>
+      <li>item 1</li>
+      <li>
+        <a href="https://google.com">GOOGLE</a>
+      </li>
+      <li>
+        <ol>
+          <li>item 1</li>
+          <li>item 2</li>
+        </ol>
+      </li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+    </ol>
+
+    <!-- 
+      Table must have the following tags sequence
+
+      table
+          thead -> tr * 1+
+          tbody -> tr * 1+
+          tfoot -> tr * 1+
+
+      inside tr only td or th as cells
+      td - data cell
+      th - header cell
+
+     -->
+
+    <table>
+      <thead>
+        <tr>
+          <td>row 1 cell 1</td>
+          <th>row 1 cell 2</th>
+          <th>row 1 cell 3</th>
+          <th>row 1 cell 4</th>
+          <th>row 1 cell 5</th>
+        </tr>
+        <tr>
+          <th>row 2 cell 1</th>
+          <th>row 2 cell 2</th>
+          <th>row 2 cell 3</th>
+          <th colspan="2">row 2 cell 4</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>tbody row 1 col 1</td>
+          <td>tbody row 1 col 2</td>
+          <td>tbody row 1 col 3</td>
+          <td>tbody row 1 col 4</td>
+          <td>tbody row 1 col 5</td>
+        </tr>
+        <tr>
+          <td>tbody row 2 col 1</td>
+          <td>tbody row 2 col 2</td>
+          <td>tbody row 2 col 3</td>
+          <td>tbody row 2 col 4</td>
+          <td>tbody row 2 col 5</td>
+        </tr>
+        <tr>
+          <td>tbody row 3 col 1</td>
+          <td>tbody row 3 col 2</td>
+          <td>tbody row 3 col 3</td>
+          <td>tbody row 3 col 4</td>
+          <td>tbody row 3 col 5</td>
+        </tr>
+        <tr>
+          <td colspan="5">merged cells</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Summary:</th>
+          <td>23</td>
+          <td>453</td>
+          <td>44</td>
+          <td>55</td>
+        </tr>
+      </tfoot>
+      <caption>
+        a caption explaining what's in the table
+      </caption>
+    </table>
+
+    <figure>
+      <img
+        src="https://cdn.pixabay.com/photo/2022/09/03/10/52/northern-gannets-7429282_960_720.jpg"
+        alt="Trulli"
+        width="100"
+      />
+      <figcaption>Fig.1 - two birds.</figcaption>
+    </figure>
+
+    <!-- Form
+      A Form which enables the client to send data in a request to server
+
+      Attributes:
+        - method - GET / POST
+        - action - url to send the data to
+     -->
+
+    <form method="GET" action="https://formspree.io/f/xgeqjpnb">
+      <input type="text" name="user-name" />
+
+      <button>send</button>
+    </form>
+
+    <form action="http://google.com/search" method="GET">
+      <input type="text" name="q" value="aaaaaaaaaaa" />
+      <input type="hidden" name="q1" value="hello" />
+
+      <button>search google</button>
+    </form>
+
+    <form action="https://www.google.com/maps/search/" method="GET">
+      <input type="text" name="query" />
+      <input type="hidden" name="api" value="1" />
+      <button>maps</button>
+    </form>
+
+    <!-- Input
+
+      placeholder - some muted texted
+
+     -->
+
+    <hr />
+
+    <form action="" method="GET">
+      <input type="color" value="#e66465" /><br />
+      <input
+        type="date"
+        value="2022-07-01"
+        min="2022-06-01"
+        max="2022-08-01"
+      /><br />
+      <input type="datetime-local" /><br />
+      <input type="month" /><br />
+      <input type="week" /><br />
+      <input type="time" /><br />
+      <input type="file" accept=".png, .jpg, .jpeg" multiple /><br />
+      <input type="range" min="0" max="2" value="0" step="1" /><br />
+      <input type="hidden" /><br />
+      <input type="number" value="5" /><br />
+      <input type="email" /><br />
+      <input type="password" placeholder="muted text" /><br />
+      <input type="search" /><br />
+      <input type="text" /><br />
+
+      <!-- use checked to check the input -->
+      <input type="radio" name="what-you-chose" value="a first radio" /><br />
+      <input
+        type="radio"
+        name="what-you-chose"
+        value="a second radio"
+        checked
+      /><br />
+      <input type="radio" name="what-you-chose" value="a third radio" /><br />
+
+      <input
+        type="radio"
+        name="what-you-chose-second"
+        value="a first radio"
+      /><br />
+      <input
+        type="radio"
+        name="what-you-chose-second"
+        value="a second radio"
+        checked
+      /><br />
+      <input
+        type="radio"
+        name="what-you-chose-second"
+        value="a third radio"
+      /><br />
+
+      <input
+        type="checkbox"
+        name="checkbox"
+        value="the user checked the checkbox"
+        checked
+      /><br />
+      <!--  -->
+
+      <input type="button" value="text inside button" /><br />
+      <input type="reset" value="text inside button" /><br />
+      <input type="submit" value="text inside button" /><br />
+
+      <textarea name="some-long-text" cols="10" rows="10">value</textarea>
+
+      <br />
+      <!-- only option tag inside select -->
+      <select name="country">
+        <option value="israel">Israel</option>
+        <option value="usa">USA</option>
+        <option value="iran">Iran</option>
+        <option value="sidney">Sidney</option>
+      </select>
+
+      <fieldset>
+        <legend>Personal Info</legend>
+
+        <label for="user-name">User Name</label>
+        <input type="text" id="user-name" name="user-name" />
+
+        <label for="user-email">Email</label>
+        <input type="email" id="user-email" name="user-email" />
+      </fieldset>
+    </form>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
