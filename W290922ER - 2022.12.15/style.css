@@ -1,0 +1,56 @@
+h1 {
+  background-color: blue;
+}
+
+#the-second-h2 {
+  background-color: pink;
+}
+
+.purple {
+  background-color: purple;
+}
+
+button {
+  width: 250px;
+  height: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  border: 2px solid blue;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+button.primary {
+  background-color: lightblue;
+  color: black;
+}
+
+div#card h1 {
+  background-color: green;
+}
+
+.biz-card {
+  background-color: lightblue;
+  width: 30vw;
+  display: inline-block;
+  padding: 10px;
+}
+
+.biz-card h1 {
+  background-color: initial;
+  color: red;
+}
+
+.biz-card address {
+  font-weight: bold;
+}
+
+div.biz-card > .body p,
+#hello > div {
+  background-color: lightsalmon;
+}
+
+div.a.b.c.d#hello {
+}
