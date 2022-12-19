@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .block,
+      .inline-block,
+      .inline {
+        border: 5px dashed green;
+        width: 600px;
+      }
+
+      div.ex {
+        width: 100px;
+        height: 150px;
+        background-color: blue;
+      }
+
+      .block div.ex {
+        display: block;
+      }
+
+      .inline-block div.ex {
+        display: inline-block;
+      }
+
+      .inline div.ex {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <h1>display: block</h1>
+      <div>
+        <div class="ex">1 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">2 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">3 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">4 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">5 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">6 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">7 Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+
+    <div class="inline-block">
+      <h1>display: inline-block</h1>
+      <div>
+        <div class="ex">1 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">2 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">3 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">4 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">5 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">6 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">7 Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+
+    <div class="inline">
+      <h1>display: inline</h1>
+      <div>
+        <div class="ex">1 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">2 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">3 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">4 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">5 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">6 Lorem ipsum dolor sit amet.</div>
+        <div class="ex">7 Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+  </body>
+</html>

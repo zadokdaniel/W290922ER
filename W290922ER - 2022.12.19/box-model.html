@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .normal div {
+        display: inline-block;
+        background-color: lightblue;
+        width: 100px;
+        height: 100px;
+        border: 10px solid blue;
+        margin: 50px 20px 70px;
+
+        /*
+        margin-top: 50px;
+        margin-right: 20px;
+        margin-bottom: 70px;
+        margin-left: 20px;
+        */
+
+        padding: 10px;
+      }
+
+      .logical {
+        direction: rtl;
+      }
+
+      .logical div {
+        display: inline-block;
+        background-color: lightcoral;
+        width: 200px;
+        margin-block: 150px;
+        margin-inline-start: 100px;
+      }
+
+      .auto div {
+        background-color: cornflowerblue;
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="normal">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <div class="logical">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+        eligendi vel pariatur rem voluptatem exercitationem veritatis
+        consectetur dignissimos. Error, suscipit?
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+        eligendi vel pariatur rem voluptatem exercitationem veritatis
+        consectetur dignissimos. Error, suscipit?
+      </div>
+    </div>
+
+    <!-- only with display: block -->
+    <div class="auto">
+      <div style="margin-left: auto">margin-left: auto</div>
+      <div style="margin-right: auto">margin-right: auto</div>
+      <div style="margin-left: auto; margin-right: auto">
+        margin-left: auto; margin-right: auto
+      </div>
+    </div>
+  </body>
+</html>
