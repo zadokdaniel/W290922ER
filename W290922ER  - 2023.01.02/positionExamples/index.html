@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>position: static</h1>
+    <div class="colored-sub-divs">
+      <div>div 1</div>
+      <div>div 2</div>
+      <div>div 3</div>
+    </div>
+
+    <h1>position: relative</h1>
+    <p>
+      relative to original location (from top left corner). keeps original
+      space.
+    </p>
+    <div class="colored-sub-divs">
+      <div>div 1</div>
+      <div class="relative">div 2</div>
+      <div>div 3</div>
+    </div>
+
+    <h1>postion: absolute</h1>
+    <p>
+      relative to start of first parent which is in any other position value
+      than static (if no such parent positioned referencing body). doesn't keeps
+      original space.
+    </p>
+
+    <div style="position: relative; padding: 200px; background-color: yellow">
+      <!-- <div class="colored-sub-divs"> -->
+      <div class="colored-sub-divs" style="position: relative">
+        <div>div 1</div>
+        <div class="absolute">div 2</div>
+        <div>div 3</div>
+      </div>
+    </div>
+
+    <h1>postion: fixed</h1>
+    <p>relative to start of viewport. doesn't keeps original space.</p>
+
+    <div class="colored-sub-divs">
+      <div>div 1</div>
+      <div class="fix">div 2</div>
+      <div>div 3</div>
+    </div>
+
+    <h1>postion: sticky</h1>
+    <p>
+      relative to original position only when passing the element with viewport.
+      keeps original space.
+    </p>
+
+    <div class="colored-sub-divs" style="height: 300vh">
+      <div>div 1</div>
+      <div class="sticky">div 2</div>
+      <div>div 3</div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

@@ -1,0 +1,63 @@
+div.hover {
+  background-color: blue;
+  border: 2px solid red;
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* :hover when mouse on top of the element */
+div.hover:hover {
+  background-color: aliceblue;
+  border-radius: 50px;
+  color: blue;
+}
+
+/* :active when mouse is clicked inside the element */
+div.hover:active {
+  background-color: aqua;
+}
+z
+/* :focus when input element is active and the user is writing into it */
+input.focus:focus {
+  background-color: blueviolet;
+}
+
+/* :nth-child(N) select the nth element of a sort */
+.nth-child :nth-child(5) {
+  background-color: aqua;
+}
+
+table {
+  border: 2px solid blue;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid blue;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: lightgreen;
+}
+table tbody tr:nth-child(odd) {
+  background-color: lightsalmon;
+}
+
+/* Pseudo Elements */
+p::first-letter {
+  font-weight: bold;
+  font-size: 2em;
+  color: blue;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+p::first-line {
+  font-weight: bold;
+}
+
+p::selection {
+  color: lightseagreen;
+}

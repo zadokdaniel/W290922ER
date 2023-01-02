@@ -1,0 +1,19 @@
+nav {
+  background-color: silver;
+  position: sticky;
+  top: 0;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 50px;
+
+  background-color: green;
+  width: 50px;
+  border-radius: 50%;
+}

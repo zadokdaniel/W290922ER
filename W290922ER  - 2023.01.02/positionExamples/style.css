@@ -1,0 +1,45 @@
+.colored-sub-divs {
+  background-color: lightblue;
+  padding: 10px;
+}
+.colored-sub-divs > div {
+  display: inline-block;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: lightcoral;
+}
+
+.relative {
+  border: 2px solid blue;
+
+  position: relative;
+  top: 20px;
+  left: 20px;
+  /* z-index: -1; */
+}
+
+.absolute {
+  border: 2px solid blue;
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.fix {
+  border: 2px solid blue;
+
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.sticky {
+  border: 2px solid blue;
+
+  position: sticky;
+  top: 50px;
+  left: 50px;
+}

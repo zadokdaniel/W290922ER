@@ -1,0 +1,23 @@
+.a {
+  margin-block-start: 10px;
+  width: 300px;
+  height: 300px;
+  /* overflow: auto; */
+  /* overflow: visible; */
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+  background-color: #f00;
+}
+
+input#auto:checked ~ div.a {
+  overflow: auto;
+}
+input#scroll:checked ~ div.a {
+  overflow: scroll;
+}
+input#hidden:checked ~ div.a {
+  overflow: hidden;
+}
+input#visible:checked ~ div.a {
+  overflow: visible;
+}
