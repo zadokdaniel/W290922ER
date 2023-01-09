@@ -1,0 +1,17 @@
+.transition {
+  background-color: aliceblue;
+  width: 100px;
+  height: 100px;
+
+  overflow: hidden;
+
+  /* transition: background-color 10s,
+    width 5s cubic-bezier(0, 1.09, 0.81, 1.14) 2s; */
+  transition: all 5s ease-in 2s;
+}
+
+.transition:hover {
+  background-color: orangered;
+
+  width: 100%;
+}

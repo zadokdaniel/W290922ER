@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-columns: repeat(2, 200px) 150px auto;
+  /* grid-template-columns: 200px 200px 150px auto; */
+  grid-template-rows: 20px repeat(5, 1fr);
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+
+  row-gap: 10px;
+  column-gap: 10px;
+
+  background-color: red;
+}
+
+.item {
+  border: 1px dashed blue;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.item1 {
+  grid-row: 3 / 6;
+  grid-column: 2 / span 2;
+}
+
+.item2 {
+  grid-row: 2 / span 3;
+  grid-column: 3 / span 1;
+}
+
+/* *********************** */
+
+.container1 {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-columns: repeat(2, 200px) 150px auto;
+  /* grid-template-columns: 200px 200px 150px auto; */
+  grid-template-rows: 20px repeat(5, 1fr);
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+
+  row-gap: 10px;
+  column-gap: 10px;
+
+  grid-template-areas:
+    ". . bye-item ."
+    ". . bye-item ."
+    ". . bye-item ."
+    ". hello-item hello-item ."
+    ". hello-item hello-item ."
+    ". hello-item hello-item .";
+
+  background-color: red;
+}
+
+.item {
+  border: 1px dashed blue;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.item11 {
+  grid-area: hello-item;
+  transition: transform 2s ease-in-out 0.2s;
+}
+
+.item22 {
+  grid-area: bye-item;
+}
+
+.item11:hover {
+  transform: rotate(20deg) scale(1.2);
+}

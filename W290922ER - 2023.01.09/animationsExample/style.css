@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+}
+.loader-wrapper {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+
+  width: 250px;
+  height: 150px;
+}
+
+.loader-wrapper > div {
+  background-color: lightgreen;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+  animation: 3s ease-out 0s infinite alternate none bounce,
+    5s linear 0s infinite alternate switchColors;
+}
+
+.loader-wrapper > div:nth-child(even) {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes bounce {
+  0% {
+    margin-top: 0px;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    margin-top: 115px;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes switchColors {
+  0% {
+    background-color: lightblue;
+  }
+  16% {
+    background-color: lightcoral;
+  }
+  32% {
+    background-color: lightgreen;
+  }
+  50% {
+    background-color: lightpink;
+  }
+  66% {
+    background-color: lightseagreen;
+  }
+  100% {
+    background-color: lightgoldenrodyellow;
+  }
+}

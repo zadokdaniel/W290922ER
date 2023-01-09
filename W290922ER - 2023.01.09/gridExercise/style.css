@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(5, 1fr);
+  gap: 10px;
+
+  box-sizing: border-box;
+  padding: 10px;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: lightblue;
+}
+
+.container > div:nth-child(even) {
+  background-color: rgb(20, 106, 135);
+}
+
+.container > div:nth-child(odd) {
+  background-color: rgb(48, 156, 193);
+}
+
+.container > div:nth-child(8) {
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 3;
+}
+
+.container > div:nth-child(7) {
+  grid-row: 1 / span 3;
+  grid-column: 5 / span 1;
+}
+
+.container > div {
+  transition: transform 0.5s;
+}
+
+.container > div:hover {
+  transform: rotate(10deg) scale(0.9);
+}

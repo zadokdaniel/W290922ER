@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  margin: 0;
+
+  background-color: lightblue;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: antiquewhite;
+}
+
+main {
+  display: flex;
+
+  flex-grow: 1;
+
+  background-color: salmon;
+}
+
+section {
+  flex-grow: 7;
+
+  background-color: lightseagreen;
+}
+aside {
+  flex-grow: 3;
+
+  background-color: lightsalmon;
+}
+
+footer {
+  background-color: lightcoral;
+}
