@@ -1,0 +1,35 @@
+@import "card";
+
+// some comment until end of line
+/*
+multi line comment
+*/
+/** Variables
+$someName: value
+
+examples: 
+$green: #43AA8B
+
+*/
+$primary: #1e2d2f;
+$fontSize: 2.5rem;
+
+div {
+  background-color: #c57b57;
+  width: 500px; // some comment
+  height: 400px;
+  color: blue;
+  font-size: $fontSize;
+
+  & h1 {
+    color: $primary;
+  }
+}
+
+.card {
+  background-color: #c57b57;
+}
+
+.text-big {
+  font-size: 2rem;
+}

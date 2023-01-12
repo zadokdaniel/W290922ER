@@ -1,0 +1,14 @@
+$primary: blue;
+$secondary: green;
+
+.card {
+  width: 50%;
+  margin-inline: auto;
+  border: 1px solid black;
+  border-radius: 50px;
+
+  & h1 {
+    color: $primary;
+    font-size: 1.5rem;
+  }
+}

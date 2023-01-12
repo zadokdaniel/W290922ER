@@ -1,0 +1,39 @@
+.card {
+  width: 50%;
+  margin-inline: auto;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+.card h1 {
+  color: blue;
+  font-size: 1.5rem;
+}
+
+/*
+multi line comment
+*/
+/** Variables
+$someName: value
+
+examples: 
+$green: #43AA8B
+
+*/
+div {
+  background-color: #c57b57;
+  width: 500px;
+  height: 400px;
+  color: blue;
+  font-size: 2.5rem;
+}
+div h1 {
+  color: #1e2d2f;
+}
+
+.card {
+  background-color: #c57b57;
+}
+
+.text-big {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */
