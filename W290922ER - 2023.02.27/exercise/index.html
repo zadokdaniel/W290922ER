@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <pre>
+        1. create a new project
+        2. ask the user for name email and age and show as follows (use inputs, divs, addEventListener)
+            "Daniel (28) - zaodk.@gamil.com"
+
+        3. create three buttons one will change a divs background one will change the border and one will change the text randomly from the following array
+        (use classList)
+        ["apple", "banana", "orange", "grapes", "watermelon"]
+
+
+        🤚🏾
+        
+        BONUS 
+        4. create input which the user will tell how many levels and show in div
+        4.1 instead of * use <div></div> with some styling
+      </pre>
+
+    <div class="ex1">
+      <h1>Ex 1</h1>
+
+      <label for="name-input">Name</label>
+      <input type="text" class="name-input" id="name-input" />
+      <br />
+
+      <label for="age-input">Age</label>
+      <input type="text" class="age-input" id="age-input" />
+      <br />
+
+      <label for="email-input">Email</label>
+      <input type="text" class="email-input" id="email-input" />
+      <br />
+
+      <div class="result"></div>
+
+      <button class="send-btn">Enter</button>
+    </div>
+
+    <div class="ex2">
+      <h1>Ex 2</h1>
+
+      <div class="result"></div>
+
+      <button class="change-border-btn">Change Border</button>
+      <button class="change-background-btn">Change Background</button>
+      <button class="change-text-btn">Change Text</button>
+    </div>
+
+    <div class="ex3">
+      <h1>Ex 3</h1>
+      <ul>
+        <li>
+          change the values and it will update. addEventListener('change', fn)
+        </li>
+        <li>
+          because different characters has different size it might not work well
+          with some characters
+        </li>
+        <li>
+          must use pre tag because html ignores spaces and new lines unless they
+          are inside textarea or pre tag
+        </li>
+      </ul>
+      <label for="levels">Levels</label>
+      <input type="number" min="0" id="levels" class="levels" value="5" />
+      <br />
+
+      <label for="char">Symbol</label>
+      <input type="text" id="char" class="char" value="*" />
+      <br />
+
+      <pre class="result"></pre>
+      <div class="result2"></div>
+    </div>
+  </body>
+</html>

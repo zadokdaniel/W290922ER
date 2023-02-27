@@ -1,0 +1,28 @@
+.ex2,
+.ex3 {
+  margin-top: 100px;
+}
+.ex2 .result {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.background {
+  background-color: lightcoral;
+}
+
+.border {
+  border: 5px solid blue;
+}
+
+.ex3 > .result2 > div {
+  display: flex;
+  justify-content: center;
+}
+
+.ex3 > .result2 > div > div {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+}
