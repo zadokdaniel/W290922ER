@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header * {
+  text-align: center;
+  color: azure;
+  margin: 0;
+}
+
+.header {
+  background-color: rgb(14, 212, 110);
+}
+.header h1 {
+  font-size: 1.4rem;
+}
+.header p {
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.colors {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.colors div {
+  margin: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: blue;
+}
