@@ -95,7 +95,7 @@ const exercise = [
           title: "find the first string value with 5 letters",
           answer: (arr) =>
             arr.find((x) => typeof x === "string" && x.length === 5), // .length exists also in arrays and array likes (might be in any object), the requirement is only for strings that is why I'll check it is a string first
-          //   answer: (arr) => arr.find((x) => x.length === 5), // try this for prove (result 4)
+          // answer: (arr) => arr.find((x) => x.length === 5), // try this for prove (result 4)
         },
         {
           title: "find all string values with 5 letters",
@@ -155,14 +155,21 @@ const exercise = [
             users.map((user) => {
               return {
                 ...user,
-                // isActive: users.isActive,
-                // balance: users.balance,
-                // age: users.age,
-                // eyeColor: users.eyeColor,
-                // name: users.name,
-                // gender: users.gender,
-                // tags: users.tags,
-                // friends: users.friends,
+                // isActive: users.isActive,            // PRIMITIVE
+                // balance: users.balance,              // PRIMITIVE
+                // age: users.age,                      // PRIMITIVE
+                // eyeColor: users.eyeColor,            // PRIMITIVE
+                // name: users.name,                    // PRIMITIVE
+                // gender: users.gender,                // PRIMITIVE
+                // tags: users.tags,                    // REFERENCE
+                // friends: users.friends,              // REFERENCE
+
+                /** FOR DEEP COPY do not forget to make copies of nested references
+                 * tags: [...user.tags],
+                 * friends: user.friends.map((friend) => {
+                 *   return { ...friend };
+                 * }),
+                 */
 
                 numberOfTags: user.tags.length,
                 numberOfFriends: user.friends.length,
@@ -179,12 +186,23 @@ const exercise = [
               .map((user) => `<div>${user.name} (${user.age})</div>`)
               .join("");
 
-            // uncomment one step at a time and check the logs
-            // return users;
+            // const usersToRender = users
             //   .filter((user) => user.age > 22)
-            //   .sort((user1, user2) => (user1.name > user2.name ? 1 : -1))
-            //   .map((user) => `<div>${user.name} (${user.age})</div>`)
-            //   .join("");
+            //   .sort((user1, user2) => (user1.name > user2.name ? 1 : -1));
+
+            // let html = "";
+            // for (const user of usersToRender) {
+            //   html += `<div>${user.name} (${user.age})</div>`;
+            // }
+
+            // document.body.innerHTML = html;
+
+            // uncomment one step at a time and check the logs
+            return users
+              .filter((user) => user.age > 22)
+              .sort((user1, user2) => (user1.name > user2.name ? 1 : -1))
+              .map((user) => `<div>${user.name} (${user.age})</div>`)
+              .join("");
           },
         },
       ],
