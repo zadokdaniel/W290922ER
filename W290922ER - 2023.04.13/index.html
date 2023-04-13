@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <!-- Todo Elements -->
+        <div class="container mt-4">
+          <!-- Todo Form -->
+          <div class="row">
+            <div class="col">
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="todo-input">
+                  I need to:
+                </label>
+                <input
+                  id="todo-input"
+                  type="text"
+                  class="form-control"
+                  placeholder="Buy milk.."
+                />
+                <button id="todo-add-btn" class="btn btn-primary" type="button">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Todo Form END -->
+
+          <!-- Todo List -->
+          <div class="row">
+            <div id="todo-list" class="col">
+              <!-- 
+              <div class="bg-light rounded text-center p-3">
+                <h1 class="display-3 fw-bold">Well Done!!</h1>
+                <p>You are all done for today, go titfanen on the beach!</p>
+              </div> 
+              -->
+
+              <!-- <ul class="list-group">
+                <li class="list-group-item">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="todo-id-1"
+                  />
+                  <label
+                    class="form-check-label stretched-link"
+                    for="todo-id-1"
+                  >
+                    Buy Milk 1
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="todo-id-2"
+                  />
+                  <label
+                    class="form-check-label stretched-link"
+                    for="todo-id-2"
+                  >
+                    Buy Milk 2
+                  </label>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <input
+                    class="form-check-input me-1"
+                    type="checkbox"
+                    id="todo-id-3"
+                    checked
+                  />
+                  <label
+                    class="form-check-label mx-1 flex-fill text-secondary text-decoration-line-through"
+                    for="todo-id-3"
+                  >
+                    Buy Milk 3
+                  </label>
+                  <i class="text-danger bi bi-trash"></i>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+          <!-- Todo List END -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
