@@ -1,5 +1,3 @@
-// RENDER
-
 const todoInput = document.getElementById("todo-input");
 const todoAddBtn = document.getElementById("todo-add-btn");
 const todoList = document.getElementById("todo-list");
@@ -20,13 +18,13 @@ function handleAddTodo() {
   renderTodoApp();
 }
 
-function handleIsCompleteChange(index) {
-  changeTodoIsComplete(index);
+function handleIsCompleteChange(id) {
+  changeTodoIsComplete(id);
   renderTodoApp();
 }
 
-function handleRemoveTodo(index) {
-  removeTodo(index);
+function handleRemoveTodo(id) {
+  removeTodo(id);
   renderTodoApp();
 }
 
@@ -44,14 +42,15 @@ function renderEmptyListNotification() {
           </div>
   `;
 }
-function renderTodoItem(todo, index) {
+
+function renderTodoItem(todo) {
   return `
         <li class="list-group-item d-flex justify-content-between">
           <input
             class="form-check-input me-1"
             type="checkbox"
-            id="todo-id-${index}"
-            onchange="handleIsCompleteChange(${index})"
+            id="todo-id-${todo.id}"
+            onchange="handleIsCompleteChange(${todo.id})"
             ${todo.isComplete ? "checked" : ""}
           />
           <label
@@ -60,18 +59,22 @@ function renderTodoItem(todo, index) {
                 ? "text-secondary text-decoration-line-through"
                 : ""
             }"
-            for="todo-id-${index}"
+            for="todo-id-${todo.id}"
           >
             ${todo.title}
           </label>
-          <i class="text-danger bi bi-trash" onclick="handleRemoveTodo(${index})"></i>
+          <i 
+            class="text-danger bi bi-trash" 
+            onclick="handleRemoveTodo(${todo.id})">  
+          </i>
         </li>`;
 }
+
 function renderTodoList(todos = []) {
   let html = '<ul class="list-group">';
-  for (let i = 0; i < todos.length; i++) {
-    const todo = todos[i];
-    html += renderTodoItem(todo, i);
+
+  for (const todo of todos) {
+    html += renderTodoItem(todo);
   }
   html += `</ul>`;
 

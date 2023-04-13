@@ -1,3 +1,5 @@
+let currentId = 1;
+
 const todos = [
   // {
   //     title: 'buy milk',
@@ -12,6 +14,7 @@ function getTodos() {
 
 function addTodo(title) {
   const newTodo = {
+    id: currentId++,
     title,
     // title: title,
     isComplete: false,
@@ -23,7 +26,19 @@ function addTodo(title) {
   return newTodo;
 }
 
-function removeTodo(index) {
+function findTodoIndex(id) {
+  const index = todos.findIndex((todo) => todo.id === id);
+
+  return index === -1 ? null : index;
+}
+
+function removeTodo(id) {
+  const index = findTodoIndex(id);
+
+  if (typeof index !== "number") {
+    return null;
+  }
+
   const removed = todos.splice(index, 1)[0];
 
   return removed ? removed : null;
@@ -35,8 +50,10 @@ function removeAllTodos() {
   return getTodos();
 }
 
-function changeTodoIsComplete(index) {
-  if (index < 0 || index > todos.length - 1) {
+function changeTodoIsComplete(id) {
+  const index = findTodoIndex(id);
+
+  if (typeof index !== "number") {
     return null;
   }
 
