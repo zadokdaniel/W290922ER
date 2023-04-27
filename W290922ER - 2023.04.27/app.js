@@ -11,6 +11,27 @@ todoInput.addEventListener("keypress", (e) => {
   }
 });
 
+todoList.addEventListener("change", (e) => {
+  const todoId = getTodoIdByElement(e.target);
+
+  if (todoId && e.target.matches("input.is-complete")) {
+    handleIsCompleteChange(todoId);
+  }
+});
+
+todoList.addEventListener("click", (e) => {
+  const todoId = getTodoIdByElement(e.target);
+
+  if (todoId && e.target.matches(".todo-remove-btn")) {
+    handleRemoveTodo(todoId);
+  }
+});
+
+function getTodoIdByElement(element) {
+  const todoItemElement = element.closest("li.todo-item");
+  return todoItemElement ? Number(todoItemElement.dataset.todoId) : null;
+}
+
 function handleAddTodo() {
   addTodo(todoInput.value);
   todoInput.value = "";
@@ -30,6 +51,7 @@ function handleRemoveTodo(id) {
 
 function renderTodoApp() {
   const todos = getTodos();
+
   todoList.innerHTML =
     todos.length > 0 ? renderTodoList(todos) : renderEmptyListNotification();
 }
@@ -45,14 +67,17 @@ function renderEmptyListNotification() {
 
 function renderTodoItem(todo) {
   return `
-        <li class="list-group-item d-flex justify-content-between">
+        <li
+          data-todo-id="${todo.id}" 
+          class="todo-item list-group-item d-flex justify-content-between"
+        >
           <input
-            class="form-check-input me-1"
+            class="is-complete form-check-input me-1"
             type="checkbox"
             id="todo-id-${todo.id}"
-            onchange="handleIsCompleteChange(${todo.id})"
             ${todo.isComplete ? "checked" : ""}
           />
+
           <label
             class="form-check-label mx-1 flex-fill ${
               todo.isComplete
@@ -64,8 +89,8 @@ function renderTodoItem(todo) {
             ${todo.title}
           </label>
           <i 
-            class="text-danger bi bi-trash" 
-            onclick="handleRemoveTodo(${todo.id})">  
+            class="todo-remove-btn text-danger bi bi-trash" 
+          >
           </i>
         </li>`;
 }
@@ -80,4 +105,3 @@ function renderTodoList(todos = []) {
 
   return html;
 }
-
