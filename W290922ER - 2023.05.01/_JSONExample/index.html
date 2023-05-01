@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <textarea name="" id="json-input" cols="30" rows="10">
+{
+    "allowedValues": [
+        "string",
+        "number",
+        "boolean",
+        "null",
+        "literal object {\"key must be in double quotes\": \"some value\"}",
+        "array []"
+    ],
+    "examples": [
+        4,
+        5,
+        6,
+        "sdkfj",
+        { "a": 5 },
+        true,
+        false,
+        null,
+        [1, 2, true, "hello"]
+    ]
+}
+          
+    </textarea>
+
+    <pre id="json-output"></pre>
+
+    <button id="btn-encode">encode</button>
+    <button id="btn-decode">decode</button>
+  </body>
+</html>
