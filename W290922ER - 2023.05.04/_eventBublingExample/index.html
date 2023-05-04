@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function log(name, e) {
+        if (name === "b") {
+          e.stopPropagation();
+        }
+        console.log(name, e.target);
+      }
+    </script>
+
+    <style>
+      .a {
+        background-color: lightblue;
+        height: 80vh;
+      }
+      .b {
+        background-color: lightcoral;
+        height: 40vh;
+      }
+      .c1,
+      .c2 {
+        background-color: lightgreen;
+        height: 10vh;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body onclick="log('body', event)">
+    <div class="a" onclick="log('a', event)">
+      a
+      <div class="b" onclick="log('b', event)">
+        b
+        <div class="c1" onclick="log('c1', event)">c1</div>
+        <div class="c2" onclick="log('c2', event)">c2</div>
+      </div>
+    </div>
+  </body>
+</html>

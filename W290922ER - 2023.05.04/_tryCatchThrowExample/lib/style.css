@@ -1,0 +1,13 @@
+@keyframes highlight {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+.log-item {
+  border: 2px solid lightcoral;
+  animation: highlight 1000ms ease-out;
+}
