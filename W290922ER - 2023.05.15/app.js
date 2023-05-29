@@ -64,7 +64,7 @@ function renderTodoApp() {
   const todos = getTodos();
 
   todoList.innerHTML =
-    todos.length > 0 ? renderTodoList(...todos) : renderEmptyListNotification();
+    todos.length > 0 ? renderTodoList(todos) : renderEmptyListNotification();
 }
 
 function renderError(err) {
@@ -115,7 +115,7 @@ function renderTodoItem({ id, title, isComplete }) {
         </li>`;
 }
 
-function renderTodoList(...todos) {
+function renderTodoList(todos = []) {
   let html = '<ul class="list-group">';
 
   for (const todo of todos) {
