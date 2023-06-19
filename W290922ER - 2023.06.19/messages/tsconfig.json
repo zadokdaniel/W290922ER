@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./build",
+    "noImplicitAny": true,
+    "target": "ES6",
+    "lib": ["ES2022", "DOM"]
+  }
+}
