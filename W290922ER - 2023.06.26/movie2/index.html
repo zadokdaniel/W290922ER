@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="./api/imdbMovies.js"></script>
+    <script src="./api/moviesApi.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid d-flex justify-content-around">
+        <a class="navbar-brand"
+          >Web <i class="bi bi-film text-success"></i> Flix</a
+        >
+      </div>
+    </nav>
+
+    <!-- headLine section -->
+
+    <div class="container-fluid bg-light p-5">
+      <div
+        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden pb-5"
+      >
+        <div class="my-3 p-3">
+          <h2 class="display-5">All Your Movies</h2>
+          <p class="lead">In One Place</p>
+        </div>
+        <div
+          class="bg-body shadow-sm mx-auto"
+          style="width: 80%; height: 300px; border-radius: 21px 21px 0 0"
+        >
+          <img
+            src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1517845732/1517845731.jpg"
+            width="600px"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- cards section -->
+
+    <div class="container">
+      <div class="row">
+        <div class="input-group">
+          <input
+            id="search-input"
+            type="text"
+            class="form-control"
+            placeholder="Search by title name"
+          />
+          <button id="search-btn" class="btn btn-primary">Search</button>
+        </div>
+
+        <div class="row mt-3">
+          <div class="input-group">
+            <input
+              id="search-input-year"
+              type="text"
+              class="form-control"
+              placeholder="Search by Year"
+            />
+            <button id="search-year" class="btn btn-primary">Search</button>
+          </div>
+      </div>
+      <div id="movies-container" class="row justify-content-between g-5 mt-5">
+        <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card" style="width: 18rem">
+            <img
+              src="https://wallpaperaccess.com/full/1768321.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">title</h5>
+              <p class="card-text">full title</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="bi bi-activity me-2"></i>
+                <span>rank</span>
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-people-fill me-2"></i>
+                <span>crew</span>
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-tv me-2"></i>
+                <span>imDbRating</span>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
