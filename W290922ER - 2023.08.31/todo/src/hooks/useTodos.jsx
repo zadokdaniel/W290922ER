@@ -1,47 +1,19 @@
 import { v4 as uuid } from "uuid";
 import { useState } from "react";
+import { useLocalStorage } from "./useLocalStorage";
 
 export const useTodos = (localStorageKey = null) => {
-  const [todos, setTodos] = useState(() => {
-    if (!localStorageKey) {
-      return [];
-    }
-
-    const savedTodos = localStorage.getItem(localStorageKey);
-
-    if (!savedTodos) {
-      return [];
-    }
-
-    return JSON.parse(savedTodos, (key, value) => {
-      if (key === "createdAt") {
-        return new Date(value);
-      }
-
-      return value;
-    });
+  const [todos, setTodos] = useLocalStorage([], localStorageKey, {
+    reviver: (key, value) => (key === "createdAt" ? new Date(value) : value),
   });
 
-  const save = (todos) => {
-    if (!localStorageKey) {
-      return;
-    }
-
-    localStorage.setItem("todos", JSON.stringify(todos));
-  };
-
   const handleDelete = (id) => {
-    setTodos((todos) => {
-      const updatedTodos = todos.filter((todo) => todo.id !== id);
-
-      save(updatedTodos);
-      return updatedTodos;
-    });
+    setTodos((todos) => todos.filter((todo) => todo.id !== id));
   };
 
   const handleTodoChange = (id, isComplete = null) => {
-    setTodos((todos) => {
-      const updatedTodos = todos.map((todo) => {
+    setTodos((todos) =>
+      todos.map((todo) => {
         if (todo.id === id) {
           return {
             ...todo,
@@ -51,28 +23,20 @@ export const useTodos = (localStorageKey = null) => {
         }
 
         return todo;
-      });
-
-      save(updatedTodos);
-      return updatedTodos;
-    });
+      })
+    );
   };
 
   const handleAdd = (task) => {
-    setTodos((todos) => {
-      const updatedTodos = [
-        ...todos,
-        {
-          id: uuid(),
-          task,
-          isComplete: false,
-          createdAt: new Date(),
-        },
-      ];
-
-      save(updatedTodos);
-      return updatedTodos;
-    });
+    setTodos((todos) => [
+      ...todos,
+      {
+        id: uuid(),
+        task,
+        isComplete: false,
+        createdAt: new Date(),
+      },
+    ]);
   };
 
   return {
