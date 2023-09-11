@@ -1,0 +1,4 @@
+GET  https://restcountries.com/v3.1/all?fields=name
+
+###
+GET  https://restcountries.com/v3.1/name/israel
