@@ -1,0 +1,26 @@
+@local=http://localhost:3900
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTM2OTA0NzM1MGU5MWFjMTcyN2M4NzkiLCJiaXoiOnRydWUsImlhdCI6MTY5ODA3NTgyOH0.fV2Kz2wENmEzwKEMSOMMuBLzx8Rh2pmT0Te932ICpUc
+
+### Register
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "Daniel", 
+    "email": "d@gmail.com", 
+    "password": "Aa123456",
+    "biz": true
+}
+
+### Authentication (login)
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "d@gmail.com", 
+    "password": "Aa123456"
+}
+
+### Athurization
+GET {{local}}/api/users/me
+x-auth-token: {{token}}
