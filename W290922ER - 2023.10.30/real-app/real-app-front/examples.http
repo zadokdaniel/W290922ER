@@ -1,0 +1,40 @@
+@local=http://localhost:3900
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTNmZWE4OWVkYTA3OTI2NDk3ZjNmZTUiLCJiaXoiOnRydWUsImlhdCI6MTY5ODY4NzYyNX0.dkxx8EyMhdnszR5RqjsRHUtBcWoyP7a0a1Kj6hcVAd0
+
+### Register
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "Daniel", 
+    "email": "d@gmail.com", 
+    "password": "Aa123456",
+    "biz": true
+}
+
+### Authentication (login)
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "d@gmail.com", 
+    "password": "Aa123456"
+}
+
+### Athurization
+GET {{local}}/api/users/me
+x-auth-token: {{token}}
+
+
+### Create Card
+POST {{local}}/api/cards
+x-auth-token: {{token}}
+Content-Type: application/json
+
+{
+    "bizName": "Lemon",
+    "bizDescription": "lemon lemon", 
+    "bizAddress": "lemon av.",
+    "bizPhone": "0554548444",
+    "bizImage": "https://media.istockphoto.com/id/1389128157/photo/lemon-fruit-with-leaf-isolated-whole-lemon-and-a-half-with-leaves-on-white-background-lemons.jpg?s=612x612&w=is&k=20&c=jrEotJaieJfvntSQH2Hq_yAVd_lVjHC1sfuThLrqr0Q="
+}
