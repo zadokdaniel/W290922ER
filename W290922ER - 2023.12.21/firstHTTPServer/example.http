@@ -1,0 +1,24 @@
+@local = http://localhost:3000
+
+GET {{local}}/adkfjasdkfs
+
+###
+POST {{local}}/skldfasdlkfsdk
+Content-Type: application/json
+my-header: my value
+
+
+### 
+GET {{local}}/index.html
+
+# HTTP/1.1 200 OK
+# Server-Name: Daniel's Server
+# Content-Type: text/html
+
+# <html>
+#     <head>
+#     </head>
+#     <body>
+#         <h1>hello!</h1>
+#     </body>
+# </html>
