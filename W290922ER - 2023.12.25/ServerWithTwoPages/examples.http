@@ -1,0 +1,11 @@
+@local=http://localhost:3000
+
+GET {{local}}/a/b/c/d/e/f/index.html
+
+###
+GET {{local}}/styles.css
+
+###
+GET {{local}}/users?a=4&b=5
+
+
