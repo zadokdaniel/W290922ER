@@ -1,0 +1,12 @@
+@local = http://localhost:3000
+
+GET {{local}}/api/message
+
+###
+POST {{local}}/api/message?message=daniel
+
+###
+DELETE {{local}}/api/message
+
+###
+DELETE  {{local}}/askfdjdsklfj

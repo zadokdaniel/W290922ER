@@ -1,0 +1,6 @@
+@local=http://localhost:3000
+
+POST {{local}}/d?a=5&b=5&b=10
+hello: say hi
+
+sadkfjasdf
