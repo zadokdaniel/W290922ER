@@ -1,0 +1,9 @@
+@local=http://localhost:3000
+
+POST {{local}}/messages?password=1234
+Content-Type: application/json
+
+{
+    "a":5,
+    "b": 10
+}
