@@ -1,0 +1,18 @@
+@local=http://localhost:3000
+
+GET {{local}}/api/cards
+###
+GET {{local}}/api/cards/bf4558f5-951b-497f-8059-4c38736ff564
+
+### 
+POST {{local}}/api/cards
+Content-Type: application/json
+
+{
+    "name": "22222222222222222222222",
+    "description": "shalom", 
+    "address": "avi111111111111111111111111"
+}
+
+###
+DELETE  {{local}}/api/cards/bf4558f5-951b-497f-8059-4c38736ff564
