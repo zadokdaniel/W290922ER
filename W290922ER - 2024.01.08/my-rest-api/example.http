@@ -1,0 +1,12 @@
+@local=http://localhost:3000
+
+
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "daniel", 
+    "email": "d@ddd.cdom", 
+    "password": "Aa123456",
+    "biz": true
+}
