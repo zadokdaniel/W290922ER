@@ -1,0 +1,25 @@
+@local=http://localhost:3000
+
+
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "daniel", 
+    "email": "d@ddd.cdom", 
+    "password": "Aa123456",
+    "biz": true
+}
+
+###
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "d@ddd.cdom", 
+    "password": "Aa123456"
+}
+
+###
+GET {{local}}/api/users/me
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTljNDhmYTVjN2E2ZmYxYTEyZGRkMjQiLCJiaXoiOnRydWUsImlhdCI6MTcwNDk5NzM4N30.V3XAXl_px46x0soCsLCnxOc_uL6XVP_iBW1oXhTwwYA
