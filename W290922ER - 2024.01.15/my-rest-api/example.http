@@ -1,0 +1,58 @@
+@local=http://localhost:3000
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWE1NjViZGI2NjE0MWY1NjE2NmZhODYiLCJiaXoiOnRydWUsImlhdCI6MTcwNTMzODMxMn0.UEutq_WalM3C4TW7FDLJgDdF3iIgmfHexSrp4xJTQ6s
+
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "daniel", 
+    "email": "a@a.com", 
+    "password": "Aa123456",
+    "biz": true
+}
+
+###
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "a@a.com", 
+    "password": "Aa123456"
+}
+
+###
+GET {{local}}/api/users/me
+x-auth-token: {{token}}
+
+###
+POST {{local}}/api/cards
+Content-Type: application/json
+x-auth-token: {{token}}
+
+{
+    "bizName": "Lemonde",
+    "bizDescription": "Lemonades out of lemons",
+    "bizAddress": "Lemonade Av.",
+    "bizPhone": "0245454555"
+}
+
+### Get Card by id
+GET {{local}}/api/cards/65a57a38e2248c822e2f086d
+x-auth-token: {{token}}
+
+### Update card
+PUT {{local}}/api/cards/65a57a38e2248c822e2f086d
+x-auth-token: {{token}}
+Content-Type: application/json
+
+{
+    "bizName": "hello", 
+    "bizPhone": "043334455", 
+    "bizAddress": "!1111111111111", 
+    "bizDescription": "222222222222"
+}
+
+
+### Delete Card
+DELETE {{local}}/api/cards/65a57a38e22
+x-auth-token: {{token}}
