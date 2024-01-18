@@ -1,0 +1,31 @@
+@local=http://localhost:3001
+
+GET {{local}}/api/messages
+
+###
+POST {{local}}/api/messages
+Content-Type: application/json
+
+{
+    "to": "dnaiel", 
+    "title": "hello there"
+}
+
+###
+DELETE {{local}}/api/messages/eeeec8db-0af6-49d1-8248-6c2de15fa609
+
+
+######################################################
+GET {{local}}/api/messagesSQL
+
+###
+POST {{local}}/api/messagesSQL
+Content-Type: application/json
+
+{
+    "to": "dnaiel", 
+    "title": "hello there"
+}
+
+###
+DELETE {{local}}/api/messagesSQL/20
